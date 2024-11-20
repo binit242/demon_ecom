@@ -862,7 +862,7 @@
               position: absolute;
               top: 1.7rem;
               width: 60%;
-              right: -2.8rem;
+              right: 1rem;
               z-index: -11;
           }
           /* ============================ End Product Section ============================= */
@@ -910,6 +910,7 @@
                   width: 95vw;
                   margin-inline: auto;
                   margin-block: 2rem;
+                  display: grid;
                   gap: 1.5rem;
                   grid-template-areas: 'one two' 'three three' 'seven eight' 'four four' 'six five' 'nine nine';
               }
@@ -1002,7 +1003,7 @@
                 z-index: -11;
             } */
               #watch {
-                  font-size: 43.8px;
+                  font-size: 41px;
               }
               #laptop {
                   font-size: 79.8px;
@@ -1017,4 +1018,19 @@
                   width: 100%;
                   right: -5.7rem;
               }
+              #control {
+                font-size: 43px;
+            }
+            .product-img5 {
+                width: 100%;
+                right: 0rem;
+                top: 8.6rem;
+            }
+
+            -lineheight{
+                --line:3rem;
+            }
+            -lineheight2{
+                --line:3rem;
+            }
           }
