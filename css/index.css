@@ -1192,5 +1192,9 @@
         font-size: 7rem;
         line-height: 5.5rem;
     }
+          .feature-info{
+       z-index: 11;
+
+    }
 
 }
