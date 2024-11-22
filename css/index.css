@@ -76,7 +76,7 @@
           }
           /* ===================== media for font size --------------------------- */
           
-          @media (max-width: 35em) {
+          @media (min-width: 35em) {
                :root {
                   --fs-bf-194: 12.3vw;
                   --fs-bf-109: 6.8125rem;
@@ -278,7 +278,7 @@
           .text-yellow {
               color: hsl(var(--clr-yellow));
           }
-          /*  font size */
+          /*  ==================================== font size ============================================*/
           
           .fs-900 {
               font-size: var(--fs-bf-194);
@@ -662,16 +662,15 @@
               padding: 0.7rem 1rem;
               border-radius: 2rem;
               cursor: pointer;
-              transition: transform 250ms ease-in-out;
               z-index: 9999;
-              transition: transform 1.5s ease-in-out;
+              transition: transform 1s ease-in-out ;
           }
           
           .large-btn:hover {
-              background-color: #7e7e7ee7;
-              box-shadow: 0px 0px 37px -5px #000000d2;
-              transform: scale(1.2);
-              border-radius: 2.5rem;
+              box-shadow: 0px 0px 37px  #000000d2;
+              text-shadow: 0px 0px 20px  #fff;
+              transform: scale(1.1);   
+                    
           }
           /* ================================= Hero Section CSS =================================================== */
           
@@ -770,6 +769,12 @@
           .product-btn {
               margin-top: 1rem;
               padding-inline: 2rem;
+              transition: transform 1s ease-in-out;
+          }
+
+          .product-btn:hover{
+            transform: scale(1.2);
+            text-shadow: 0px 0px 15px #ffffff;
           }
           
           .earphone {
@@ -862,7 +867,7 @@
               position: absolute;
               top: 1.7rem;
               width: 60%;
-              right: 1rem;
+              right: 0.8rem;
               z-index: -11;
           }
           /* ============================ End Product Section ============================= */
@@ -976,7 +981,7 @@
                   right: 0rem;
               }
           }
-          /* ============================Media for desktop=============================@media (min-width: 59em) { */
+          /* ============================Media for desktop=============================*/
           
           @media (min-width:59em) {
               .product-section {
@@ -987,21 +992,7 @@
                   display: grid;
                   grid-template-areas: 'one two three three' 'four four five six' 'seven eight nine nine';
               }
-              /* .product-img1 {
-                  width: 150%;
-                  right: -10rem;
-                  z-index: -11;
-              }
-              .product-img2 {
-                  
-                  right: -6rem;
-                  
-              }
-              .product-img1 {
-                width: 80%;
-                right: -10rem;
-                z-index: -11;
-            } */
+              
               #watch {
                   font-size: 41px;
               }
@@ -1033,4 +1024,173 @@
             -lineheight2{
                 --line:3rem;
             }
+            .product-img8 {
+                width: 70%;
+                right: 0rem;
+                top: 0rem;
+            }
           }
+
+          /* ============================ Service Section ============================= */
+
+          .service-section{
+            width: 90vw;
+            margin-inline: auto;
+            margin-block: 2rem;
+            display: grid;
+            gap: 1.5rem;
+            grid-template-areas: 'one two' 'three four';
+          }
+
+          .Service:nth-child(1){
+            grid-area: one;
+          }
+          .Service:nth-child(2){
+            grid-area: two;
+          }
+          .Service:nth-child(3){
+            grid-area: three;
+          }
+          .Service:nth-child(4){
+            grid-area: four;
+          }
+
+          .Service{
+            display: grid;
+            justify-content: center;
+            place-items: center;
+            text-align: center;
+            gap: 1rem;
+
+          }
+
+          .Service .fs-200{
+            font-size: 0.9rem;
+          }
+          .Service .fs-50{
+            font-size: 0.79rem;
+          }
+
+
+/* ============================ Media Quaries for Service section ============================= */
+
+/* ============================ Desktop ============================= */
+
+@media (min-width: 59em){
+.service-section{
+    width: 90vw;
+    margin-inline: auto;
+    margin-block: 2rem;
+    display: grid;
+    gap: 5rem;
+    grid-template-areas: 'one two three four';
+  }
+  .Service .fs-200{
+    font-size: 1.3  rem;
+  }
+  .Service .fs-50{
+    font-size: 0.99rem;
+  }
+
+}
+
+/* ========================== Feature Section ============================== */
+
+.feature-section{
+    width: 90vw;
+    margin-inline: auto;
+    border-radius: 2rem;
+    position: relative;
+    margin-top: 15rem;
+    display: grid;
+    gap: 1rem;
+    place-items: center;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding-inline: 4rem;
+    padding: 8rem 2rem 2rem 2rem;
+}
+
+.feature-section >* img{
+    margin-top: -18rem;
+    position: absolute;
+    right: -1.5rem;
+
+}
+
+.feature-info{
+    padding-inline: 1rem;
+    margin-top: 1rem;
+}
+
+/* ========================== Media Quaries  ============================== */
+
+/* ========================== IPAD  ============================== */
+
+@media (min-width:35em) and (max-width:59em){
+    .feature-section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+        text-align: left;
+        padding: 2rem 1rem;
+        page-break-inside: 7rem;
+    }
+
+    .feature-section > * img{
+        
+        right: 4rem;
+        
+    }
+
+    .date{
+        padding-top: 5rem;
+        
+    }
+
+    .smile{
+        display: block;
+        position: absolute;
+        padding-bottom: 1rem;
+    }
+
+    .lineheight2{
+        line-height: 4rem;
+    }
+
+}
+
+
+/* ========================== Desktop ============================== */
+
+@media (min-width:59em){
+    .feature-section{
+        z-index: 2;
+        
+        grid-template-columns: repeat(2, 1fr);
+        place-items: start;
+        text-align: left;
+        padding: 4rem 7rem;
+        display: grid;
+        width: 95vw;
+        gap: 15rem;
+    }
+
+    .feature-section > * img{
+        margin-top: -25rem;
+        position: absolute;
+        right: 25rem;
+        z-index: 1;
+    }
+
+    .smile{
+        display: block;
+        
+        margin-bottom: 2rem;
+    }
+    .font-size{
+        font-size: 7rem;
+        line-height: 5.5rem;
+    }
+
+}
