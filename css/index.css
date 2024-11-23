@@ -1005,6 +1005,12 @@
                   top: -2rem;
                   z-index: -11;
               }
+                    .product-img1 {
+                  width: 93%;
+                  left: 21rem;
+                  top: 2rem;
+                  z-index: -11;
+              }
               .product-img6 {
                   width: 100%;
                   right: -5.7rem;
