@@ -531,6 +531,7 @@
                   padding: clamp(3rem, 30vh, 10rem) 0;
                   transform: translateY(-100%);
                   transition: transform 250ms ease-in-out;
+                  -webkit-transition: transform 250ms ease-in-out;
                   align-items: center;
               }
               .primary-navigation[data-visible="true"] {
@@ -554,6 +555,7 @@
                   cursor: pointer;
                   transform: translateY(-300%);
                   transition: transform 250ms ease-in-out;
+                  -webkit-transition: transform 250ms ease-in-out;
               }
               .mobile-close-btn[data-visible="true"] {
                   transform: translateY(0%);
@@ -576,13 +578,17 @@
                   position: fixed;
                   flex-direction: column;
                   z-index: 9999;
+                  align-items: center;
+                  justify-content: center;
                   text-align: center;
                   --flex-gap: 1.7rem;
                   inset: 0 0 0 0;
-                  background-color: hsl(var(--clr-gray-Light) / 8.9);
+                  background-color: hsl(var(--clr-gray-light)/ 0.9);
+                  backdrop-filter: blur(10px);
                   padding: clamp(3rem, 30vh, 10rem) 0;
                   transform: translateY(-100%);
                   transition: transform 250ms ease-in-out;
+                  -webkit-transition: transform 250ms ease-in-out;
               }
               .primary-navigation[data-visible="true"] {
                   transform: translateY(0%);
@@ -597,6 +603,8 @@
               .mobile-close-btn {
                   display: block;
                   z-index: 88888;
+                  align-items: center;
+                  justify-content: center;
                   top: 5rem;
                   position: fixed;
                   right: 13rem;
@@ -605,6 +613,7 @@
                   cursor: pointer;
                   transform: translateY(-300%);
                   transition: transform 25oms ease-in-out;
+                  -webkit-transition: transform 25oms ease-in-out;
               }
               .mobile-close-btn[data-visible="true"] {
                   transform: translateY(0%);
@@ -630,6 +639,7 @@
                   transform: translateX(150%);
                   z-index: 222;
                   transition: transform 250ms ease-in-out;
+                  -webkit-transition: transform 250ms ease-in-out;
               }
               .cart-icon[data-visible="true"] {
                   transform: translateX(0%);
@@ -663,7 +673,8 @@
               border-radius: 2rem;
               cursor: pointer;
               z-index: 9999;
-              transition: transform 1s ease-in-out ;
+              transition: transform 1s ease-in-out;
+              -webkit-transition: transform 1s ease-in-out;
           }
           
           .large-btn:hover {
@@ -770,6 +781,7 @@
               margin-top: 1rem;
               padding-inline: 2rem;
               transition: transform 1s ease-in-out;
+              -webkit-transition: transform 1s ease-in-out;
           }
 
           .product-btn:hover{
@@ -1121,6 +1133,7 @@
 .feature-info{
     padding-inline: 1rem;
     margin-top: 1rem;
+    z-index: 10;
 }
 
 /* ========================== Media Quaries  ============================== */
@@ -1290,10 +1303,9 @@
     right: 0;
     top: 0;
     border-radius: 0.5rem;
-    border-color: antiquewhite;
-    border-width: 10px;
     transform: translateX(120%);
     transition: transform 1s ease-in-out;
+    -webkit-transition: transform 1s ease-in-out;
 }
 
 .product:hover .product-details{
